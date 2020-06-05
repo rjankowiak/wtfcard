@@ -1,9 +1,56 @@
 .card {
-    background: $cardColor;
-    border-radius: $cardRound;
-    width: $cardWidth;
+  background: $cardColor;
+  border-radius: $cardRound;
+  width: 642px;
+  padding: 32px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .avatar {
-    display: inline;
+  margin-right: 32px;
+}
+
+.information {
+  &__header {
+    margin-bottom: 24px;
+  }
+  &__name {
+    margin: 0;
+    font-size: $nameSize;
+    font-weight: normal;
+  }
+  &__position {
+    margin: 0;
+    font-style: italic;
+    color: $positionColor;
+    font-size: $positionSize;
+  }
+  &__description {
+    line-height: 22px;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 22px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+.footer {
+  &__link {
+    color: $footerLinkColor;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-wrap: wrap;
+    &--mobile{
+        justify-content: center;
+    }
+  }
+  .avatar {
+    margin-right: 0px;
+  }
 }
